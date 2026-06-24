@@ -33,3 +33,17 @@ Speedup: 0.999x
 | half2 | 0.179846 | 559.720 | PASSED |
 
 Speedup: 1.158x
+
+## Reduction Benchmark
+
+Data size: 16,777,216 elements  
+Data type: FP32  
+Threads per block: 256  
+Repeat: 100  
+
+| Op | Avg Time (ms) | Bandwidth (GB/s) | Result | Expected | Check |
+|---|---:|---:|---:|---:|---|
+| Sum | 0.153658 | 438.452 | 1.67772e+07 | 1.67772e+07 | PASSED |
+| Max | 0.152695 | 441.217 | 499 | 499 | PASSED |
+
+Note: Bandwidth is estimated from global memory traffic across all reduction levels.

@@ -86,3 +86,16 @@ Sueedup(half2 over half):1.15814x
 ./run.sh 05_block_size_sweep 
 ./run.sh 06_float4_vectorized 
 ./run.sh 07_half2_vectorized
+
+这是09的结果
+Data type: FP32
+Memory per array: 64 MB
+Threads per block: 256
+Repeat: 100
+
+Op          AvgTime(ms)       Bandwidth(GB/s)     Result            Expected          Check       
+--------------------------------------------------------------------------------------------------
+Sum         0.153658          438.452             1.67772e+07       1.67772e+07       PASSED      
+Max         0.152695          441.217             499               499               PASSED      
+
+Note: Bandwidth is estimated from global memory traffic across all reduction levels.
